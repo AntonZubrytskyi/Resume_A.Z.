@@ -1,0 +1,378 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #277469;
+  font-size: 14px;
+  line-height: 22px;
+  color: #555555;
+}
+
+
+.bold {
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.semi-bold {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.cv {
+  width: 800px;
+  height: auto;
+  display: flex;
+  margin: 50px auto;
+}
+
+.cv .left_side {
+  width: 300px;
+  background: #596164;
+}
+
+.cv .left_side .cv_profile {
+  width: 100%;
+  height: 280px;
+
+}
+
+.cv .left_side .cv_profile img {
+  width:250px ;
+  height: 250px;
+  margin:10px 20px;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 3px 3px 10px rgba(0,0,0,.5);
+  cursor: pointer;
+  transition: .5s;
+  user-select: none;
+  filter: grayscale(100%)
+}
+.cv .left_side .cv_profile img:hover{
+    filter:grayscale(0%);
+    transform:scale(1.3);
+    box-shadow: 3px 3px 20px rgba(0,0,0,.5);
+}
+
+
+.cv .left_side .cv_content {
+  padding: 0 25px;
+}
+
+.cv .title {
+  margin-bottom: 20px;
+}
+
+.cv .left_side .bold {
+  color: #071a55e0;
+}
+
+.cv .left_side .regular {
+  color: #a2cbdf;
+  font-size: 16px;
+}
+
+
+
+.cv .cv_item {
+  padding: 25px 0;
+  border-bottom: 2px solid #250c44;
+}
+
+.cv .left_side .cv_item:last-child,
+.cv .right_side .cv_item:last-child {
+  border-bottom: 0px;
+}
+
+
+.cv .left_side ul{
+    margin-top: 5px;
+}
+
+.cv .left_side ul li {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.cv .left_side ul li:last-child {
+  margin-bottom: 0;
+}
+
+.cv .left_side ul li .icon {
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  color: #16095c;
+  border-radius: 50%;
+  margin-right: 15px;
+  font-size: 16px;
+  position: relative;
+}
+
+.cv .icon i,
+.cv .right_side .cv_hobby ul li i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cv .left_side ul li .data {
+  color: #000000;
+  font-size: 16px;
+}
+
+
+
+.cv .right_side {
+  width: 500px;
+  background: #fff;
+  padding: 25px;
+}
+
+.cv .right_side .bold {
+  color: #14607ca1;
+  font-size: 30px;
+}
+
+
+.cv .right_side .cv_education ul {
+  padding-left: 40px;
+  }
+
+
+
+
+.cv .right_side ul{
+    position: relative;
+}
+
+.cv .right_side ul li {
+  position: relative;
+}
+
+.cv .right_side ul li .date {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+
+.cv .right_side ul li:last-child .info {
+  margin-bottom: 0;
+} 
+
+
+
+
+.cv .right_side .cv_education ul li::before {
+content: '';
+  position: absolute;
+  top: -3px;
+  left: -35px;
+  width: 25px;
+  height: 25px;
+  background: transparent;
+  border-radius: 30px;
+  transition: background-color 0.5s, width 0.5s;
+  transition-delay: 0.5s, 0s;
+  border: 2px solid rgb(192,191,191);
+  box-sizing: border-box;
+
+}
+
+
+.cv .right_side .cv_education ul li:hover::before{
+    width: 100%;
+    background-color:rgb(192,191,191);
+    transition-delay: 0s, 0.3s;
+}
+
+
+.cv .right_side .cv_education ul li::after{
+    content: "";
+    position: absolute;
+    top: 5px;
+    left:-27px;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid rgb(0,0,255);
+    border-right: 2px solid rgb(255,255,0);
+    transform: rotate(45deg);
+    transition: 0.5s;
+    transition-delay: 0s;
+} 
+
+.cv .right_side .resume_education ul li:hover::after{
+    transition-delay: 0.5s;
+    transform: rotate(45deg) scale(1.5);
+}
+
+.cv .right_side .cv_education ul li .info {
+    position: relative;
+    z-index: 10;
+    color: black;
+}
+
+
+
+
+.skills{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap:20px 10px
+} 
+
+.skills .skill_item p{
+    font-size: 15px;
+    font-weight: bold;
+
+}
+.skill_item span{
+    display: block;
+    width: 100%;
+    height: 10px;
+    background-color: rgb(192,191,191);
+    margin-top: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+
+
+
+
+@keyframes animate {
+    from{
+        width: 0;
+    }
+    
+}
+
+ .html::before{
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 80%;
+    background-color: black;
+    top:50%;
+    left:1px;
+    transform:translateY(-50%);
+    border-radius: 10px;
+    animation: animate 2s ease-in-out forwards;
+}
+
+
+ .js::before{
+    position: absolute;
+    content: "";
+    width: 70%;
+    height: 80%;
+    background-color: black;
+    top:50%;
+    left:1px;
+    transform:translateY(-50%);
+    border-radius: 10px;
+    animation: animate 2s ease-in-out forwards;
+}
+
+ .react::before{
+    position: absolute;
+    content: "";
+    width: 70%;
+    height: 80%;
+    background-color: black;
+    top:50%;
+    left:1px;
+    transform:translateY(-50%);
+    border-radius: 10px;
+    animation: animate 2s ease-in-out forwards;
+}
+
+ .redux::before{
+    position: absolute;
+    content: "";
+    width: 65%;
+    height: 80%;
+    background-color: black;
+    top:50%;
+    left:1px;
+    transform:translateY(-50%);
+    border-radius: 10px;
+    animation: animate 2s ease-in-out forwards;
+}
+
+ .git::before{
+    position: absolute;
+    content: "";
+    width: 70%;
+    height: 80%;
+    background-color: black;
+    top:50%;
+    left:1px;
+    transform:translateY(-50%);
+    border-radius: 10px;
+    animation: animate 2s ease-in-out forwards;
+}
+
+ .scrum::before{
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 80%;
+    background-color: black;
+    top:50%;
+    left:1px;
+    transform:translateY(-50%);
+    border-radius: 10px;
+    animation: animate 3s ease-in-out forwards;
+}
+
+ .mysql::before{
+    position: absolute;
+    content: "";
+    width: 55%;
+    height: 80%;
+    background-color: black;
+    top:50%;
+    left:1px;
+    transform:translateY(-50%);
+    border-radius: 10px;
+    animation: animate 2s ease-in-out forwards;
+}
+
+
+.cv .right_side .cv_hobby ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cv .right_side .cv_hobby ul li {
+  width: 80px;
+  height: 80px;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: relative;
+  color: #16095c;
+}
+
+.cv .right_side .cv_hobby ul li i {
+  font-size: 30px;
+}
+
+
+
+.cv .right_side .cv_hobby ul li:last-child:before {
+  display: none;
+}
