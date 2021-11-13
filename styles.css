@@ -1,11 +1,12 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Road+Rage&family=Space+Mono&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Space Mono', monospace;
 }
 
 body {
@@ -14,7 +15,6 @@ body {
   line-height: 22px;
   color: #555555;
 }
-
 
 .bold {
   font-weight: 700;
@@ -28,7 +28,7 @@ body {
 }
 
 .cv {
-  width: 800px;
+  width: 900px;
   height: auto;
   display: flex;
   margin: 50px auto;
@@ -42,7 +42,6 @@ body {
 .cv .left_side .cv_profile {
   width: 100%;
   height: 280px;
-
 }
 
 .cv .left_side .cv_profile img {
@@ -57,12 +56,12 @@ body {
   user-select: none;
   filter: grayscale(100%)
 }
+
 .cv .left_side .cv_profile img:hover{
     filter:grayscale(0%);
     transform:scale(1.3);
     box-shadow: 3px 3px 20px rgba(0,0,0,.5);
 }
-
 
 .cv .left_side .cv_content {
   padding: 0 25px;
@@ -81,8 +80,6 @@ body {
   font-size: 16px;
 }
 
-
-
 .cv .cv_item {
   padding: 25px 0;
   border-bottom: 2px solid #250c44;
@@ -92,7 +89,6 @@ body {
 .cv .right_side .cv_item:last-child {
   border-bottom: 0px;
 }
-
 
 .cv .left_side ul{
     margin-top: 5px;
@@ -127,15 +123,8 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.cv .left_side ul li .data {
-  color: #000000;
-  font-size: 16px;
-}
-
-
-
 .cv .right_side {
-  width: 500px;
+  width: 600px;
   background: #fff;
   padding: 25px;
 }
@@ -145,13 +134,9 @@ body {
   font-size: 30px;
 }
 
-
 .cv .right_side .cv_education ul {
   padding-left: 40px;
   }
-
-
-
 
 .cv .right_side ul{
     position: relative;
@@ -167,13 +152,9 @@ body {
   margin-bottom: 15px;
 }
 
-
 .cv .right_side ul li:last-child .info {
   margin-bottom: 0;
 } 
-
-
-
 
 .cv .right_side .cv_education ul li::before {
 content: '';
@@ -188,16 +169,13 @@ content: '';
   transition-delay: 0.5s, 0s;
   border: 2px solid rgb(192,191,191);
   box-sizing: border-box;
-
 }
-
 
 .cv .right_side .cv_education ul li:hover::before{
     width: 100%;
     background-color:rgb(192,191,191);
     transition-delay: 0s, 0.3s;
 }
-
 
 .cv .right_side .cv_education ul li::after{
     content: "";
@@ -213,9 +191,9 @@ content: '';
     transition-delay: 0s;
 } 
 
-.cv .right_side .resume_education ul li:hover::after{
+.cv .right_side .cv_education ul li:hover::after{
     transition-delay: 0.5s;
-    transform: rotate(45deg) scale(1.5);
+    transform: rotate(45deg) scale(2.5);
 }
 
 .cv .right_side .cv_education ul li .info {
@@ -223,9 +201,6 @@ content: '';
     z-index: 10;
     color: black;
 }
-
-
-
 
 .skills{
     margin-top: 30px;
@@ -249,10 +224,6 @@ content: '';
     position: relative;
 }
 
-
-
-
-
 @keyframes animate {
     from{
         width: 0;
@@ -273,6 +244,18 @@ content: '';
     animation: animate 2s ease-in-out forwards;
 }
 
+ .css::before{
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 80%;
+    background-color: black;
+    top:50%;
+    left:1px;
+    transform:translateY(-50%);
+    border-radius: 10px;
+    animation: animate 2s ease-in-out forwards;
+}
 
  .js::before{
     position: absolute;
@@ -352,7 +335,6 @@ content: '';
     animation: animate 2s ease-in-out forwards;
 }
 
-
 .cv .right_side .cv_hobby ul {
   display: flex;
   justify-content: space-between;
@@ -371,8 +353,48 @@ content: '';
   font-size: 30px;
 }
 
-
-
 .cv .right_side .cv_hobby ul li:last-child:before {
   display: none;
+}
+
+.btn{
+  font-size: 40px;
+  padding: 10px 20px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+  background-color: grey;
+  border:none;
+  outline:none;
+  color:white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,.5);
+  cursor:pointer;
+  transition: .5s;
+  overflow: hidden;
+}
+
+
+.btn::before{
+  content:"";
+  position: absolute;
+  top:let(--y);
+  left:let(--x);
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  background-color: black;
+  transition: width 0.5s,height 0.5s;
+  transform: translate(-50%,-50%)
+}
+
+.btn span{
+  position: relative;
+  z-index: 1;
+  
+}
+.btn:hover::before{
+  width: 350px;
+  height:350px;
 }
